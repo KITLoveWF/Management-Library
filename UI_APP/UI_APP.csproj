@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{625CA2BE-C2E3-44F3-BD69-6E4483BFFB80}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UI_APP</RootNamespace>
+    <AssemblyName>UI_APP</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account.cs" />
+    <Compile Include="Book.cs" />
+    <Compile Include="borrow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="borrow.Designer.cs">
+      <DependentUpon>borrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="borrower.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="borrower.Designer.cs">
+      <DependentUpon>borrower.cs</DependentUpon>
+    </Compile>
+    <Compile Include="content.cs" />
+    <Compile Include="DANGKY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANGKY.Designer.cs">
+      <DependentUpon>DANGKY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DANGNHAP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DANGNHAP.Designer.cs">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FindContent.cs" />
+    <Compile Include="History.cs" />
+    <Compile Include="HistoryUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HistoryUser.Designer.cs">
+      <DependentUpon>HistoryUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAIN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAIN.Designer.cs">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MAINBORROWER.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MAINBORROWER.Designer.cs">
+      <DependentUpon>MAINBORROWER.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Manage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="searchBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="searchBook.Designer.cs">
+      <DependentUpon>searchBook.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewBook.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="viewBook.Designer.cs">
+      <DependentUpon>viewBook.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="borrow.resx">
+      <DependentUpon>borrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="borrower.resx">
+      <DependentUpon>borrower.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANGKY.resx">
+      <DependentUpon>DANGKY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DANGNHAP.resx">
+      <DependentUpon>DANGNHAP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HistoryUser.resx">
+      <DependentUpon>HistoryUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAIN.resx">
+      <DependentUpon>MAIN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MAINBORROWER.resx">
+      <DependentUpon>MAINBORROWER.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="searchBook.resx">
+      <DependentUpon>searchBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewBook.resx">
+      <DependentUpon>viewBook.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\đăng nhập.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ảnh người.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ổ khóa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BACKGROUND.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log-out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\research.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tìm kiếm.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mượn.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngtree-japanese-girl-sitting-in-front-of-a-stack-of-books-picture-image_2650363.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\50dc5f3d4fc7e699bfd6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\noel.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-1092170968-612x612.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
